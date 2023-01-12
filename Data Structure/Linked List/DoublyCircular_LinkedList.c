@@ -1,4 +1,4 @@
-// c progrma - LinkedList - Doubly Circular Linked List
+// Data Structure - LinkedList - Doubly Circular Linked List
 #include<stdio.h>
 #include<stdlib.h>
 struct Node{

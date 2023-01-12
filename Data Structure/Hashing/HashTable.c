@@ -1,4 +1,4 @@
-// Data Structure - Example of hashing
+// Data Structure - hashing
 #include<stdio.h>
 #include<stdlib.h>
 struct Set{

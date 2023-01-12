@@ -1,4 +1,4 @@
-// c program - Queue - Circular Queue
+// Data Structure - Queue - Circular Queue
 #include<stdio.h>
 int Size = 5;
 int f = -1,r = -1;

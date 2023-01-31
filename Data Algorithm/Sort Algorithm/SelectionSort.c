@@ -5,14 +5,16 @@
 int*SelectionSort(int*arr,int size){
     for(int i=0;i<size;i++){
         int MinIdx = i;
-        for(int j=MinIdx;j<size;j++){
+        for(int j=MinIdx+1;j<size;j++){
             if(arr[MinIdx]>arr[j]){
                 MinIdx = j;
             }
         }
-        int Temp = arr[MinIdx];
-        arr[MinIdx] = arr[i];
-        arr[i] = Temp;
+        if(MinIdx!=i){
+            int Temp = arr[MinIdx];
+            arr[MinIdx] = arr[i];
+            arr[i] = Temp;
+        }
     }
     return arr;
 }

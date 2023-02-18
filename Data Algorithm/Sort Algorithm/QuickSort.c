@@ -28,7 +28,7 @@ void QuickSort(int arr[],int low,int high){
     }
 }
 int main(){
-    int arr[] = {5,52,3652,1215,234,643};
+    int arr[] = {5,52,32,12,43,24};
     int size = sizeof(arr)/sizeof(int);
     QuickSort(arr,0,size-1);
     for(int i=0;i<size;i++){

@@ -1,0 +1,22 @@
+    
+    Time Complexity : 
+      It is measure of Number of steps required for working of algorithm
+      it determines speed factor of algorithm 
+
+    Complexity Class : 
+      Polynomial Class
+
+      Non-Plynomial Class
+
+      Non-Plynomial Hard Class
+
+
+    Asymptotic Notation : 
+      Big Oh O()
+        Upper Bound time Complexity
+
+      Big Theta 
+        Average Bound time Complexity
+        
+      Big Omega 
+        Lower Bound time Complexity

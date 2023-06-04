@@ -1,16 +1,16 @@
-/*
-    Data Types :
+
+  Data Types :
     1. Primitive Data Type
     2. Non Primitive Data Type
 
-    In Primitive 
+  In Primitive 
     1.Integer    - int
     2.Float      - float
     3.Double     - double
     4.Long       - long
     5.Character  - char
 
-    In Non Primitive
+  In Non Primitive
     1.Array      - Collection of Homogenous Data Elements
     2.String     - Collection of Character ie.Array of Char
     3.Structure  - Collection of Data
@@ -18,14 +18,16 @@
     5.Class      - Object Oriented Programming Concept
                    Collection of Object ie.Data & Function 
 
-     Derived One / Abstract Data Type
-      Stack & Queue
+  Abstract Data Types : 
+    
+    Stack 
 
-      Linked List
+    Queue
 
-      Tree
+    Linked List
 
-      Graph
+    Tree
 
-      HashTable
-*/
+    Graph
+
+    HashTable 

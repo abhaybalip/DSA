@@ -5,7 +5,7 @@
 #define Max 100;
 
 struct Job{
-    char Id[5];
+    char id[5];
     int DeadLine;
     int Profit;
 };
@@ -31,9 +31,58 @@ int main(void){
     }
     printf("%10s    %10s    %10s","Job","DeadLine","Profit");
     for(i=0;i<n;i++){
-        printf("%10s    %10s    %10s \n",jobs[i].Id,jobs[i].DeadLine,jobs[i].Profit);
+        printf("%10s    %10s    %10s \n",jobs[i].id,jobs[i].DeadLine,jobs[i].Profit);
     }
     JobSequencing(jobs,n);
 
     return 0;
+}
+
+void JobSequencing(struct Job jobs[],int n){
+    int i,j,k,MaxProfit ,FilledTimeSlot = 0,Dmax = 0;
+    int TimeSlot[100];
+    for(i=0;i<n;i++){
+        if(jobs[i].DeadLine>Dmax){
+            Dmax = jobs[i].DeadLine;
+        }
+    }
+    for(i=1;i<=Dmax;i++){
+        TimeSlot[i] = -1;
+    }
+    printf("DMax = %d \n",Dmax);
+    for(i=1;i<=n;i++){
+        k = minValue(Dmax,jobs[i].DeadLine);
+        while(k>=1){
+            if(TimeSlot[k]==-1){
+                TimeSlot[k] = i-1;
+                FilledTimeSlot++;
+                break;
+            }
+            k--;
+        }
+        if(FilledTimeSlot==Dmax){
+            break;
+        }
+    }
+    printf("\nRequired Jobs : ");
+    for(i=1;i<=Dmax;i++){
+        printf("%s ",jobs[TimeSlot[i]].id);
+        if(i<Dmax){
+            printf(" : ");
+        }
+    }
+
+    MaxProfit = 0;
+    for(i=1;i<Dmax;i++){
+        MaxProfit += jobs[TimeSlot[i]].Profit;
+    }
+    printf("Max Profit : %d \n",MaxProfit);
+}
+int minVlaue(int a,int b){
+    if(a<b){
+        return a;
+    }
+    else{
+        return b;
+    }
 }

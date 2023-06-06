@@ -12,7 +12,7 @@ int main(){
     int n,i,j;
     void Queen(int row,int n);
     printf("\nEnter no of Queens : ");
-    scanf("%d ",&n);
+    scanf("%d",&n);
     Queen(1,n);
 
     return 0;
@@ -49,7 +49,7 @@ void DisplaySolution(int n){
     int i,j;
     printf("\n\nSolution  %d : \n\n",++count);
     for(i=1;i<=n;++i){
-        printf("\n\nC %d ",j);
+        printf("\n\nRow %d ", i);
         for(j=1;j<=n;++j){
             if(Board[i]==j){
                 printf("\tQ");
